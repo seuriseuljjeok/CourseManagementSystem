@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="presentation.PLogin"/>
+    <fullyQualifiedTypeName name="valueObject.VUserInfo"/>
+    <fullyQualifiedTypeName name="valueObject.VData"/>
+    <fullyQualifiedTypeName name="valueObject.VMiriDamgi"/>
+    <fullyQualifiedTypeName name="valueObject.VSugangsincheong"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="control.CIndex"/>
+    <fullyQualifiedTypeName name="model.MIndex"/>
+    <fullyQualifiedTypeName name="valueObject.VIndex"/>
+    <fullyQualifiedTypeName name="control.CLecture"/>
+    <fullyQualifiedTypeName name="model.MLecture"/>
+    <fullyQualifiedTypeName name="valueObject.VLecture"/>
+    <fullyQualifiedTypeName name="java.util.Vector"/>
+    <fullyQualifiedTypeName name="presentation.PLectureBasket"/>
+</qualifiedTypeNameHistroy>
