@@ -1,12 +1,12 @@
 package valueObject;
 
 public class VLogin {
-	//³»ºÎ¿¡ ÀúÀåÇÒ id¿Í pw
+	//ë‚´ë¶€ì— ì €ì¥ id pw
 	private String id;
 	private String pw;
 
 	public void setUserID(String userID) {
-		this.id = userID;	//¿ÜºÎ¿¡¼­ Àü´Ş¹ŞÀº userID¸¦ ³»ºÎÀÇ id¿¡ ÀúÀå
+		this.id = userID;	//ì™¸ë¶€ì—ì„œ ì „ë‹¬ë°› userIDë¥¼ idì— ì €ì¥ 
 	}
 
 	public void setUserPW(String userPW) {

@@ -6,15 +6,15 @@ import model.MLecture;
 import valueObject.VLecture;
 
 public class CLecture {
-	private MLecture mLecture;
+	private  MLecture mLecture;
 	
-	public CLecture() {
-		this.mLecture = new MLecture();
-	}
-
-	public Vector<VLecture> getVLectureVector(String fileName) {
-		Vector<VLecture> vLectureVector = this.mLecture.getVLectureVector(fileName);
-		return vLectureVector;
-	}
+//	public CLecture() {
+//		this.mLecture = new MLecture();
+//	}
+//	
+//	public Vector<VLecture> getVLectureVector(String fileName) {
+//		Vector<VLecture> vLectureVector = this.mLecture.getVLectureVector(fileName);
+//		return vLectureVector;
+//	}
 
 }

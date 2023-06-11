@@ -4,9 +4,10 @@ import valueObject.VLogin;
 import valueObject.VUserInfo;
 
 public class CLogin {
+	private MAccount mAccount;
 
 	public VUserInfo login(VLogin vLogin) {
-		MAccount mAccount = new MAccount();
+		mAccount = new MAccount();
 		VUserInfo vUserInfo = mAccount.login(vLogin);
 		
 		return vUserInfo;		

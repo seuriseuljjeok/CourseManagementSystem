@@ -5,6 +5,7 @@ import java.util.Vector;
 
 import control.CIndex;
 import control.CLecture;
+import model.MLecture;
 import valueObject.VIndex;
 import valueObject.VLecture;
 import valueObject.VUserInfo;
@@ -12,6 +13,7 @@ import valueObject.VUserInfo;
 public class PLectureSelection {
 	private CIndex cIndex;
 	private CLecture cLecture;
+	private MLecture mLecture;
 
 	
 	public PLectureSelection(){
@@ -24,7 +26,7 @@ public class PLectureSelection {
 
 		Vector<VIndex> vIndexVector = cIndex.getVIndexVector(fileName);
 		for(VIndex vIndex: vIndexVector) {
-			System.out.println(vIndex.getCode() + " " +vIndex.getName());	
+			vIndex.show();
 		}
 		//CIndex에게 indexVector를 가져와서 화면에 뿌려주라 해야 함.
 		String sCode = keyboard.next();
@@ -38,15 +40,16 @@ public class PLectureSelection {
 	private VLecture findLecture(String message, String fileName, Scanner keyboard) {
 		System.out.println(message+"코드를 선택하세요.");
 
-		Vector<VLecture> vLectureVector = cLecture.getVLectureVector(fileName);
+//		Vector<VLecture> vLectureVector = cLecture.getVLectureVector(fileName);
+		Vector<VLecture> vLectureVector = mLecture.findFileName(fileName);
 		for(VLecture vLecture: vLectureVector) {
-			System.out.println(vLecture.getCode() + " " +vLecture.getName() + " " +vLecture.getLecturer() + " " +vLecture.getCredit() + " " +vLecture.getTime());	
+			vLecture.show();
 		}
 		//CIndex에게 indexVector를 가져와서 화면에 뿌려주라 해야 함.
 		String sCode = keyboard.next();
-		int iCode = Integer.parseInt(sCode);
+//		int iCode = Integer.parseInt(sCode);
 		//iCode를 selectedIndex로 바꿔줘야 함 
-		VLecture vLecture = this.convertLecture(vLectureVector, iCode);
+		VLecture vLecture = this.convertLecture(vLectureVector, sCode);
 		
 		return vLecture;
 	}
@@ -57,7 +60,7 @@ public class PLectureSelection {
 		}return null;
 	}
 	
-	private VLecture convertLecture (Vector<VLecture> vLectureVector, int iCode) {
+	private VLecture convertLecture (Vector<VLecture> vLectureVector, String iCode) {
 		for(int i=0; i<vLectureVector.size(); i++) {
 			if(iCode == vLectureVector.get(i).getCode()) return vLectureVector.get(i);
 		}return null;
